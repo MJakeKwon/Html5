@@ -1,0 +1,1238 @@
+###########################################################################
+
+■ HTML5 기본
+
+
+01. WWW ( World Wide Web ) 
+     인터넷에 연결된 컴퓨터를 통해 사람들이 정보를 공유할 수 있는 정보 공간 
+
+ 
+02. 인터넷 : 전 세계를 연결하고 있는 국제 정보 통신망 
+ 
+
+03. WEB   
+    - 인터넷 통신망 위에서 작동하는 서비스 
+    - 1991 년 팀 버니스리는 인터넷 공간 안에서 문서가 서로 이동할 수 있는 
+      하이퍼링크라는 특수한 기능을 사용, 문서와 문서 사이를 이동할수 있는 개념을 제안, 
+      이를 바탕으로 World Wide Web 을 개발 배포 
+    - 1994년 팀 버니스리는 HTML 웹 표준을 지정하는 W3C(World Wide Web Consortium)
+		재단  창설 HTML(1991) ~ HTML5(2014) 발표 
+     - W3C는 HTML 표준만 제정 강제하지 않으며, 이로인한 웹브라우저 전쟁(?) 이 시작 됨 
+ 
+
+04. HTML : Hypertext Markup Language
+ 	- 하이퍼텍스트는 사용자의 선택에 따라 특정한 정보화 관련된 부분으로 이동할 수 있는 
+	  조직화된 문서
+ 	- 문자를 동적으로 연결 , 사용자의 선택에 따라 특정한 정보, 관련된 부분으로 이동할 수 
+	   있게 조직화 표준화된 문서
+ 	- Hyper+Text (활동적, 이동성+문자) : 문자를 동적으로 연결, 사용자의 선택에 따라 특정한 
+	  정보, 관련된 부분으로 이동
+ 	- Markup Language :   조직화 된 문서 , 표준화된 문서
+
+ 
+05. 플러그인  
+     - 웹의 발전 엄청난 발전 속도에 비해 웨 표준을 지정하는 W3C의 대응의 부족
+     - 웹브라우저 와 연동되어 특정 프로그램을 사용자 PC에 추가로 설치 웹브라우저의  
+      기능을 확장하는 방법으로 MS의 ActiveX , 어도비 플래시 , 플렉스 등.... 
+     -  웹 사이트에 각종 플러그인이 들어가며 웹사이트가 무거워(?)지기 시작했고 
+      이를 막고자 플러그인 없이 각종 기능을 제공하는 HTML5표준제정 2014년 10월 
+      권고안 발표함.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###########################################################################
+
+■  용어정리
+
+1. Tag  : HTML 페이지에서 Element 객체(?)를 만드는데 사용
+    - <html> XXXX </html> : <~~> : 시작Tag , </~~> : 종료Tag 로구성
+    - 시작 Tag, 종료 Tag 를 동시 사용 방법 :  <html/>
+    - 사용할 수 있는 Tag는 W3C 재단에서 표준 제정.
+    
+
+ 2. Attribute : Tag 에 추가정보를 부여.
+    - <html lang="ko"> XXXXX</html>
+    
+
+ 3. Element : Tag , Tag 추가정보를 기술한 Attribute를 이용 만들어진 객체(?)
+ 
+
+ 4. 주석 : 실행에 영햐을 미치지 않고 설명을 목적으로 사용하는 코드
+ 	- <!-- XXXXXX --> : HTML 주석
+
+
+[ 실습 ]  01firstHtml.html
+
+<!DOCTYPE html>
+
+<!-- 
+	ㅇ HTML 주석 : 프로그램 실행에 영향을 주지 않고 설명을 목적으로 사용   
+	ㅇ <!DOCTYPE html>  
+		: Browser 가 현재의 페이지가 HTML5 문서임을 인식
+		: HTML5 는 반드시 표기하여야 하며 문서의 첫 줄에 기술
+-->
+
+<!-- 	<html>  : HTML  페이지 Root Tag  -->
+<html lang="ko">
+<!-- 
+	ㅇ Tag 에 Attribute 를 사용 추가적 정보 기술.
+	ㅇ lang Attribute는 브라우저에 영향을 미치지 않음. 
+	ㅇ 검색엔진이 탐색시 어떤언어로 구성되어 있는지 인식
+-->
+	
+	<!--  <head> : <body> Tag에 필요한 부가적, 부수적 필요 정보를 기술 -->
+	<head>
+		<!-- <title> : Browser 에 제목표시 -->
+		<title>01firstHtml.html</title>
+	</head>
+	
+	<!-- <body> : 사용자에게 실질적 보이는 부분 -->
+	<body>
+		안녕하세요. 처음 작성하는 html 페이지 입니다.
+	</body>
+	
+</html>
+
+
+###########################################################################
+
+■  글자Tag
+
+1. 제목 Tag : <h1> , <h2> , <h3> , <h4> , <h5> , <h6>
+	ㅇ h는 Header를 의미하며 숫자는 글자의 크기를 의미
+     
+ 2. 본문 Tag : <p>
+ 	ㅇ p는 Paragraph 를 의미하며 하나의 단락을 만들수 있다.
+    
+ 3. 개행 Tag : <br>
+ 4. 수평줄 긋기 Tag : <hr>
+ 5. 그대로(?) 보여주기 (Keyword 등) Tag : <pre> 
+
+
+[ 실습 ]  02h_p_br_hr_pre.html
+
+<!DOCTYPE html>
+
+<html lang="ko">
+	
+	<head>
+		<title>02h_p_br_hr.html</title>
+	</head>
+	
+	<body>
+		
+		<!-- h? : 각각의 글자 크기를 확인 -->
+		<h1>h1 제목</h1>
+		<h2>h2 제목</h2>
+		<h3>h3 제목</h3>
+		<h4>h4 제목</h4>
+		<h5>h5 제목</h5>
+		<h6>h6 제목</h6>
+
+		
+		<h1>HTML : Hypertext Markup Language</h1>
+		
+		<!-- <p> : 하나의 단락을 구성함 -->
+		<p>하이퍼텍스트는 사용자의 선택에 따라 특정한 정보화 관련된 부분으로 
+				이동할 수 있는 조직화된 문서</p>
+		<p>문자를 동적으로 연결 , 사용자의 선택에 따라 특정한 정보, 관련된 부분으로 
+				이동할 수 있게 조직화 표준화된 문서</p>
+		<p>Hyper+Text (활동적, 이동성+문자) : 문자를 동적으로 연결 , 
+				사용자의 선택에 따라 특정한 정보, 관련된 부분으로 이동</p>
+		<p>Markup Language :   조직화 된 문서 , 표준화된 문서</p>
+		
+		<p>
+			<!-- html 개행 (Enter ?) 미인식 , 공백 1EA 인식 -->
+			Tag  : HTML 페이지에서 Element 객체(?)를 만드는데 사용 
+			: 
+			사용할 수 있는 Tag는 W3C 재단에서 표준 제정.
+		</p>
+		
+		<!-- <hr/> : 수평줄 긋기 : Browser 출력 확인 -->
+		<hr/>
+		
+		<p>Attribute : Tag 에 추가정보를 부여.</p>
+		
+		<hr/>
+		
+		<p>Element : Tag , Tag 추가정보를 기술한 Attribute를 이용 만들어진 객체(?).</p>
+		
+		<hr/>
+		
+		<p>
+			주석 : 프로그래밍 언어에서는 프로그램 실행에 영향을 미치지 않고 
+			설명을 목적으로 사용하는 코드
+		</p>
+		
+		<p>
+			주석 : 프로그래밍 언어에서는 프로그램 실행에 영향을 미치지 않고 
+			설명을 목적으로 사용하는 코드
+		</p>
+		
+		<!-- <br/> : 개행 ( enter(?) 개행 미인식)  : Browser 출력 확인 -->
+		<br/>
+		
+		<p>
+			주석 : 프로그래밍 언어에서는 프로그램 실행에 영향을 미치지 않고 
+			설명을 목적으로 사용하는 코드
+		</p>
+		
+		<hr/>
+		
+		<p>
+			HTML 공백을 1EA 만 인식 :                       Browser 출력확인
+		</p>
+		
+		<!--  &nbsp; 로 공백을 강제삽입(?), 표현 할 수 있다-->
+		<p>
+			HTML 공백을 1EA 만 인식 : &nbsp;&nbsp;&nbsp;&nbsp; Browser 출력확인
+		</p>
+		
+		<hr/>
+		
+		<!-- <pre> : 입력된 문장 그대로 보여주기 -->
+		<pre>
+			html 은 공백을 1EA 만 인식 :                       확인
+			public class ApplilcationTest{
+				public static void main(String[] args){
+			
+				}
+			}
+		</pre>
+		
+		<pre>
+				특수문자 : HTML 특수 문자 검색해볼 것
+				ㅇ          : non-breaking space : &nbsp;
+				ㅇ    <     : less than : &lt;
+				ㅇ    >     : greater than : &gt;
+				ㅇ    &     : ampersand : &amp;
+				등등...
+		</pre>
+		
+	</body>
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###########################################################################
+
+■  글자Tag
+
+1. <b> : 굵은글자
+2. <i> : 기울어진 글자
+3. <small> : 작은 글자
+4. <sub> : 아래에 달라 붙는 글자
+5. <sup> : 위로 달라 붙는 글자
+6. <ins> : 밑줄 글자
+7. <del> : 가운데 줄이 그어진 글자
+
+
+[ 실습 ] 03b_i_small_sub_sup_isn_del.html
+
+<!DOCTYPE html>
+
+<html lang="ko">
+	
+	<head>
+		<title>03b_i_small_sub_sup_isn_del.html</title>
+	</head>
+	
+	<body>
+		
+		<!-- 굵은글자 -->
+	    <b>W3C : World Wide Web Consortium</b>
+	    <br/><hr/>
+	    
+	    <!-- 기울어진 글자 -->
+	    <i>W3C : World Wide Web Consortium</i>
+	    <br/><hr/>
+	    
+	    <!-- 작은 글자 -->
+	    W3C 표준지정 : &nbsp;<small>HTML : Hypertext Markup Language</small><br/><hr/>
+	    
+	    <!-- 아래에 달라 붙는 글자 -->
+	    W3C 표준지정 : &nbsp;<sub>HTML : Hypertext Markup Language</sub><br/><hr/>
+	    
+	    <!-- 위로 달라 붙는 글자 -->
+	    W3C 표준지정 : &nbsp;<sup>HTML : Hypertext Markup Language</sup><br/><hr/>
+	    
+	    <!-- 밑줄 글자 -->
+	    W3C 표준지정 : &nbsp;<ins>HTML : Hypertext Markup Language</ins><br/><hr/>
+	    
+	    <!-- 가운데 줄이 그어진 글자 -->
+	    W3C 표준지정 : &nbsp;<del>HTML : Hypertext Markup Language</del><br/><hr/>
+	    
+	</body>
+	
+</html>
+
+
+
+###########################################################################
+
+■  글자Tag
+
+1. <a> : Anchor Tag
+	: 서로 다른 웹 페이지 이동 ,  웹 페이지 내부 특정 부위 이동할 때 사용
+==============================================================
+==> HTML : Hypertext Markup Language
+ 	- 하이퍼텍스트는 사용자의 선택에 따라 특정한 정보화 관련된 부분으로 이동할 수 있는 
+		조직화된 문서
+ 	- 문자를 동적으로 연결 , 사용자의 선택에 따라 특정한 정보, 관련된 부분으로 이동할 수 
+		있게 조직화 표준화된 문서
+ 	- Hyper+Text (활동적, 이동성+문자) : 문자를 동적으로 연결 , 사용자의 선택에 따라 
+		특정한 정보, 관련된 부분으로 이동
+ 	- Markup Language :   조직화 된 문서 , 표준화된 문서
+==============================================================
+
+
+[ 실습 ] 04a.html
+
+ <!DOCTYPE html>
+
+<html lang="ko">
+	
+	<head>
+		<title>04a.html</title>
+	</head>
+	
+	<body>
+	
+		<!-- 
+			 <a> : Anchor Tag : 서로 다른 웹 페이지 이동 ,  웹 페이지 내부 특정 부위 
+						이동할 때 사용
+		-->
+		<a href="http://www.daum.net">다음</a><br />
+    	<a href="http://www.naver.com/">네이버</a><br />
+    	
+    	<hr/>
+	   
+	   <!-- Attribute href 은 필수로 이동않을 시 # 이용 : 빈 링크   -->
+	    <a href="#">이동예정 Page</a><br />
+    	<a href="#">구현될 Page</a><br />
+    	
+    	<hr/>
+    	
+    	<!-- 	페이지 내부 이동  : #id 사용 
+    			# : Keyword 로 Tag 의 Attribute id 이름을 기술 , 접근(?) -->
+    	<a href="#abc">HTML 이란... 이동하기</a>
+	    <a href="#xyz">Tag 란... 이동하기</a>
+	     <a href="#etc">etc... 이동하기</a>
+	    
+	    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	    <hr />
+
+	    
+	    <!--	ㅇ 각각의 Element 는 Unique한 식별성을 갖을수 있다
+	       		ㅇ Tag의 id attribute 을 사용하면 각각의 Element 에 식별성을 부여할수 있다 -->
+	    <h1 id="abc">HTML : Hypertext Markup Language</h1>
+	    <p>
+    		- Hyper+Text (활동적, 이동성+문자)<br/> 
+   				&nbsp;&nbsp;&nbsp;: 문자를 동적으로 연결 , 사용자의 선택에 따라 특정한 정보, 
+				관련된 부분으로 이동<br/>
+			- Markup Language<br/> 
+  				&nbsp;&nbsp;&nbsp;:  조직화 된 문서 , 표준화된 문서
+	  	</p>
+	    
+	    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	    <hr />
+	    
+	    
+	    <!--	ㅇ 각각의 Element 는 Unique한 식별성을 갖을수 있다
+	       		ㅇ Tag의 id attribute 을 사용하면 각각의 Element 에 식별성을 부여할수 있다 -->
+	    <h1 id="xyz">Tag</h1>
+	    <p>
+	   		&nbsp;&nbsp;&nbsp;: HTML 페이지에서 Element 객체(?)를 만드는데 사용<br/>
+	   		&nbsp;&nbsp;&nbsp;: 사용되는 Tag 는 W3C(World Wide Web) Consortium
+			표준 제정.<br/>
+	   	</p>
+	   	
+	   	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	    <hr />
+	    
+	    
+	    <!--	ㅇ 각각의 Element 는 Unique한 식별성을 갖을수 있다
+	       		ㅇ Tag의 id attribute 을 사용하면 각각의 Element 에 식별성을 부여할수 있다 -->
+	    <h1 id="etc">etc....</h1>
+	    <p>
+	   		&nbsp;&nbsp;&nbsp;: Attribute : Tag 에 추가정보를 부여.<br/>
+	   		&nbsp;&nbsp;&nbsp;: Element : Tag , Tag 추가정보를 기술한 Attribute를 이용 
+			만들어진객체(?)<br/>
+	   	</p>
+	   	
+	   	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	    <hr />
+
+	</body>
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+###########################################################################
+
+■  목록Tag
+
+1. <ul> : 순서없는 목록 ==> Unorder List
+2. <ol> : 순서있는 목록 ==> Order LIst
+3. <li> : 목록요소 ==> List item
+
+
+[ 실습 ] 05ul_ol_li.html
+
+<!DOCTYPE html>
+
+<html lang="ko">
+	
+	<head>
+		<title>05ul_ol_li.html</title>
+	</head>
+	
+	<body>
+	
+		Order List Tag : 순서있는 목록 <br/>
+		<ol>
+			<!--  List item Tag -->
+			<li>학생1</li>
+			<li>학생2</li>
+			<li>학생3</li>
+		</ol><p/>
+		
+		<hr size="1"/>
+	
+		Unorder  ListTag : 순서없는 목록<br/>
+		<ul>
+			<!--  List item Tag -->
+			<li>학생1</li>
+			<li>학생2</li>
+			<li>학생3</li>
+		</ul>
+		
+		<hr size="5"/>
+	
+		Unorder Tag  : 순서없는 목록 : type Attribute 추가정보 기술<br/>
+		<ul type="square">
+			<li>학생1</li>
+			<li>학생2</li>
+			<li>학생3</li>
+		</ul>
+		
+		<hr/>
+		
+		<!--  Browser 에서 출력결과 확인 -->
+		<h1>중첩목록</h1>
+		<ul>
+			<li>ol tag 사용
+				<ol>
+					<li>학생1</li>
+					<li>학생2</li>
+					<li>학생3</li>
+				</ol><p/>
+			</li>	
+				
+			<li>ul tab 사용
+				<ul>
+					<li>학생1</li>
+					<li>학생2</li>
+					<li>학생3</li>
+				</ul>
+			</li>
+			
+			<li>ul Tag 사용 : Attribute type="circle"
+				<ul type="circle">
+					<li>학생1</li>
+					<li>학생2</li>
+					<li>학생3</li>
+				</ul>
+			</li>
+			
+			<li>ul Tag 사용 : Attribute type="disc"
+				<ul type="disc">
+					<li>학생1</li>
+					<li>학생2</li>
+					<li>학생3</li>
+				</ul>
+			</li>
+				
+			<li>ul Tag 사용 : Attribute type="square"
+				<ul type="square">
+					<li>학생1</li>
+					<li>학생2</li>
+					<li>학생3</li>
+				</ul>
+			</li>
+		</ul>
+
+	</body>
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+###########################################################################
+
+■  테이블Tag
+
+1. <table> : 표 만들때 사용
+2. <tr> : 표내부 행 ==> Table Row
+3. <th> : 행내부 제목 ==> Table Header
+4. <td> : 행내부 Data ==> Table Data
+
+
+[ 실습 ] 06table.html
+
+<!DOCTYPE html>
+
+<html lang="ko">
+	
+	<!--  <head> : <body> Tag에 필요한 부가적, 부수적 필요 정보를 기술 -->
+	<head>
+		<!-- head Tag 의 내부Tag 중 meta Tag : 웹페이지의 추가 정보기술 -->
+		<meta charset="EUC-KR">
+		<title>06table.html</title>
+	</head>
+	
+	<body>
+		
+		<!-- Attribute border : 표 테두리 두께지정 -->
+		<table border="1">
+			<!-- tr : Table Row -->
+			<tr>
+				<!-- th : Table Header -->
+				<th>no</th>
+				<th>이름</th>
+				<th>성별</th>
+				<th>비고</th>
+			</tr>
+			
+			<tr>
+				<!-- td : Table Data -->
+				<td>1</td>
+				<td>홍길동</td>
+				<td>남</td>
+				<td>&nbsp;</td>
+			</tr>
+			
+			<!-- Attribue  align : 확인요.. -->
+			<tr align="right">
+				<td>2</td>
+				<td>홍길순</td>
+				<td>여</td>
+			</tr>
+			
+			<!-- Attribue  align : 확인요.. -->
+			<tr align="center">
+				<td>3</td>
+				<td>이순신</td>
+				<td>남</td>
+				<td>장군</td>
+			</tr>
+			
+			<tr>
+				<!-- td,th Tag Attribute  colspan : 셀너비지정 , rowspan : 셀높이지정 -->
+				<td colspan="4">column합치기(셀병합?)</td>
+			</tr>
+			
+			<tr align="center">
+				<td colspan="4">column합치기(셀병합?)</td>
+			</tr>
+			
+		</table>
+		
+		
+		<br/><hr/><hr size="10"/><hr size="2"/><br/>
+		
+		
+		<!-- 화면에 출력결과 예측, 화면확인 -->
+		<!-- td,th Tag Attribute  colspan : 셀너비지정 , rowspan : 셀높이지정 -->
+		<table border="1">
+			
+			<tr>
+				<th colspan="3">column 셀병합(?) 3개 </th>
+				<th rowspan="2">row 셀병합(?) 2개 </th>
+			</tr>
+			
+			<tr>
+				<td>row 2 / column 1 </td>
+				<td>row 2 / column 2  </td>
+				<td>row 2 / column 3 </td>
+			</tr>
+			
+			<tr>
+				<td>row 3 / column 1 </td>
+				<td>row 3 / column 2  </td>
+				<td>row 3 / column 3 </td>
+				<td>row 3 / column 4 </td>
+			</tr>
+			
+			<tr>
+				<td>row 4 / column 1 </td>
+				<td rowspan="2">row 4 / column 2  </td>
+				<td>row 4 / column 3 </td>
+				<td>row 4 / column 4 </td>
+			</tr>
+			
+			<tr>
+				<td>row 5 / column 1 </td>
+				<td>row 5 / column 3 </td>
+				<td>row 5 / column 4 </td>
+			</tr>
+			
+			<tr>
+				<td style="background: yellow">row 6 / column 1 </td>
+				<td>row 6 / column 2  </td>
+				<td>row 6 / column 3 </td>
+				<td style="background: red">row 6 / column 4 </td>
+			</tr>
+			
+			<tr style="background: green">
+				<td>row 7 / column 1 </td>
+				<td>row 7 / column 2  </td>
+				<td>row 7 / column 3 </td>
+				<td>row 7 / column 4 </td>
+			</tr>
+			
+		</table>
+		
+	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###########################################################################
+
+■  이미지 Tag : <src>
+
+- Attribute 
+	ㅇ src : 이미지의 경로지정
+	ㅇ alt : 이미지 없을때 메시지 지정
+	ㅇ width , height etc... 
+
+
+[ 실습 ] 07img.html
+
+<!DOCTYPE html>
+
+<html lang="ko">
+	
+	<head>
+		<meta charset="EUC-KR">
+		<title>07img.html</title>
+	</head>
+	
+	<body>
+	
+		<img src="./Forest Flowers.jpg" width="300" height="300"/><br/>
+		<img src="./Forest Flowers.jpg" /><br/>
+		<img src="./Humpback Whale.jpg" width="200" /><br/>
+		<img src="./Humpback Whale.jpg" /><br/>
+		<img src="./NoImage" alt="이미지없음, 추후 이미지  추가예정" 
+							width="200" height="200"/><br/>
+		
+		<!--  - 웹 페이지 작성시 이미지를 추후에 넣을 경우. 
+		        - 이미지가 미확정일 경우 원하는 크기의 이미지를 제공 : placehold.it 사이트-->
+		<img src="http://placehold.it/300X300" /><br/>
+		<img src="http://placehold.it/350x150" />
+		<img src="http://placehold.it/200X150" />
+		<img src="http://placehold.it/100X100" />
+		
+		<hr/>
+		
+		<h3><ins>anchor Tag + img Tag 사용</ins></h3>
+		<a href="http://www.daum.net">
+			<img src="http://search1.daumcdn.net/search/statics/
+											common/img/p/daumlogo_140516.gif">
+		</a>image Click 해 보면....
+		
+		<hr/>
+		
+		<h3><ins>anchor Tag + img Tag + table 사용</ins></h3>
+	
+		<table>
+		
+			<tr align=center>
+				<td>no</td>
+				<td>site name</td>
+				<td>remark</td>
+			</tr>
+			
+			<tr >
+				<td>1</td>
+				<td><a href="http://www.daum.net">다음</a></td>
+				<td>&nbsp;</td>
+			</tr>
+			
+			<tr >
+				<td>2</td>
+				<td>
+					<a href="http://www.daum.net">
+						<img src="http://search1.daumcdn.net/search/statics/
+														common/img/p/daumlogo_140516.gif">
+					</a>
+				</td>
+				<td>&nbsp;</td>
+			</tr>
+			
+			<tr >
+				<td>3</td>
+				<td>
+					<!-- Attribute href  필수 : 웹표준을 지키며 이동않을 시 # 이용 : 빈 링크   -->
+					<a href="#">
+						<!-- 이미지가 미확정 -->
+						<img src="http://placehold.it/50X50" />
+					</a>
+				</td>
+				<td>회사 이미지 미정</td>
+			</tr>
+			
+		</table>
+	
+	</body>
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###########################################################################
+
+■  입력양식 Tag : 사용자 정보를 입력 받을수 있다
+
+1. <form> Tag : 입력양식 생성.
+     - Attribute
+     	: action  입력받은 Data 전달위치(?)지정
+     	: method 입력받은 Data 전달방식(?)지정 
+     	
+  2. <input> Tag : 사용자 정보를 입력 받는 기능수행 Tag
+  	- Attribute
+     	: type 입력양식의 형태 지정  예> 문자,화일....
+     	: name 입력값의 이름(?) , Tag 이름(?)
+     	: value 입력값 , Default 값
+     	
+     - <label> Tag : <input> Tag 설명해주는 Tag
+        : input Tag 의 id  Attribute  값을 label Tag 의 for Attribute 의 값으로 지정
+     	
+ 3. <textarea> Tag : 여러 줄의 글자를 입력할 때 사용
+     - Attribute 
+     	: cols 너비 지정 , rows 높이 지정
+     	
+ 4. <select> Tag : 여러개의 목록에서 선택할 수 있는 입력양식 제공
+      - <option> , <optgroup> Tag 함께 사용 
+
+
+
+[ 실습 ] 08input01.html
+
+<!DOCTYPE html>
+
+<html lang="ko">
+	
+	<head>
+		<meta charset="EUC-KR">
+		<title>08input01.html</title>
+	</head>
+	
+	<body>
+	
+	<!-- Data 보내기 Button 를 Click 후 URL 확인  
+	      - Attribute  action , method 확인 : 추후 Server 구현시 다시 언급 -->
+	<form action="http://127.0.0.1:8080/Html5/abc.do" method="get">
+		
+		이름 1 : <input type="text"  name="name01"  value="홍길동" /><br />
+		이름 2 : <input type="text" name="name02"  /><br />
+		<label  for="name3">이름 3 :</label>
+		<input type="text" id="name3" name="name03"  /><br />
+		<!-- label Tag 사용 / 미사용의 차이점 : 이름 3 을 Click 해보면.... -->
+		      
+		<hr/>
+		      
+		취미는 ? <br>
+		<!-- Attribute checked="checked" : XHTML5 Notation -->
+		독서		<input type="checkbox" name="reading" value="reading" checked="checked"/>
+		<!-- Attribute checked="checked" : HTML5 Notation -->
+		야구		<input type="checkbox" name="baseball" value="baseball" checked />
+		축구		<input type="checkbox" name="footbal" value="football" /><br>
+		
+		<!--  시작Tag 와 종료Tag 를 같이 기술 Noation
+				: XHTML Notation  <hr/>  /  HTML5 Notation <hr> 				 -->
+		<hr>
+		
+		성별 ? <br>
+		남자		<input type="radio" name="sex" value="male" checked />
+		여자		<input type="radio" name="sex" value="female" /><br>
+		    
+		 <hr/>
+		 
+		사진 : <input type="file" name="picture" /><br />
+		화면에는 안보임 : <input type="hidden" name="hideData" value="숨긴Data"/><br />
+		
+		<hr/>
+		
+		비밀번호01 : <input type="password" name="password01" value="1234" /><br />
+		비밀번호02 : <input type="password" name="password02" /><br />
+		 
+		 <hr/>
+		    
+		<input type="reset" value="다시쓰기"/><br />
+		<input type="submit" value="Data 보내기"/><br />
+		<input type="button" value="그냥 button" />
+	      
+	</form>
+	
+	<hr size="5" color="red"/>
+	
+	<h3>위의 input Tag 는 HTML4에서 지원 / 아래는 HTML5에서 추가지원 하는 type </h3>
+	
+	<hr size="5" color="red"/>
+	
+	input type="color" : <input type="color" /><br />
+	input type="date" : <input type="date" /><br />
+	input type="datetime" : <input type="datetime" /><br />
+	input type="datetime-local" : <input type="datetime-local" /><br />
+	input type="email" : <input type="email" /><br />
+	input type="month" : <input type="month" /><br />
+	input type="number" : <input type="number" /><br />
+	input type="range" : <input type="range" /><br />
+	input type="search" : <input type="search" /><br />
+	input type="tel" : <input type="tel" /><br />
+	input type="time" : <input type="time" /><br />
+	input type="url" : <input type="url" /><br />
+	input type="week" : <input type="week" /><br />
+	
+	<h3>
+		Browser 지원 유무는 확인필요<br/>
+		W3C는 HTML 표준만 제정 강제하지 않으며, 이로인한 웹브라우저 전쟁(?) 이 시작 됨 
+	</h3>
+	
+	</body>
+	
+</html>
+
+
+
+[ 실습 ] 08input02.html
+
+<!DOCTYPE html>
+
+<html lang="ko">
+	
+	<head>
+		<meta charset="EUC-KR">
+		<title>08input02.html</title>
+	</head>
+	
+	<body>
+		
+		좋아하는 운동은 ?<br>
+		<select name="sport01" size="5" multiple>
+			<option value="baseball" selected >야구</option>
+			<option value="축구" >축구</option>
+			<option value="배구" selected >배구</option>
+			<option value="농구" >농구</option>
+		</select>
+
+		<hr/>
+
+		좋아하는 운동은 ?<br>
+		<select name="sport02" size="3">
+			<option value="baseball">야구</option>
+			<option value="축구" >축구</option>
+			<option value="배구" >배구</option>
+			<option value="농구">농구</option>
+		</select>
+
+		<hr/>
+		
+		공부합시다...<br>
+		<select>
+	        <optgroup label="공교육">
+	            <option>초등학교</option>
+	            <option>중학교</option>
+	            <option>대학교</option>
+	        </optgroup>
+	        <optgroup label="사교육">
+	            <option>???</option>
+	            <option>%%%</option>
+	        </optgroup>
+    	</select>
+		
+		<hr/>
+
+		의견<br>
+		<textarea name="note1" rows="10" cols="40">의견을 적어주세요.....
+		</textarea>
+		
+		<hr/>
+
+		건의사항<br>
+		<textarea name="note2" rows="5" cols="10">
+		</textarea>
+	
+	</body>
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###########################################################################
+
+■  공간분할 Tag : 화면에 표시된 내용을 분할하여 레이아웃, 디자인 등 처리(?)
+
+1. <div> Tag : Block 형식의 공간 분할. / 블럭을 쌓아올리는 형태
+
+2. <span> Tag : Inline 형식의 공간 분할. / 한줄에 차레로 줄을 세우는 형태
+
+
+[ 실습 ] 09div_span.html
+
+<!DOCTYPE html>
+
+<html lang="ko">
+	
+	<head>
+		<meta charset="EUC-KR">
+		<title>09div_span.html</title>
+	</head>
+	
+	<body>
+		
+		<!--  출력결과만 확인 Attribute style : 화면을 꾸미는(? ,Desgin) 속성 -->
+		<div style="background: red">Block A</div>
+		<div style="background: green">Block B</div>
+		<div style="background: yellow">Block C</div>
+		
+		<span style="background: red">Inline A</span>
+		<span style="background: green">Inline B</span>
+		<span style="background: yellow">Inline C</span>
+		
+		<!-- 
+			ㅇ div  : Block 형식 공간분할
+			ㅇ span : Inline 형식 공간분할 
+			==> 각종 Tag를 Block / Inline 형식 Tag로 분류하면...
+			ㅇ Block 형식 Tag : div , h1~h6 , p , ol , ul , li , table, form
+			ㅇ Inline 형식 Tag : span ,  a , input 등....
+		 -->
+	
+	</body>
+	
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+###########################################################################
+
+■  시멘텍 구조 Tag 
+	: Semantic "의미론적" 사전적의미 
+	: 특정 Tag에 의미부여 (?) 화면구성시 의도 기계적(?) 전달
+
+
+1. <head> Tag : 헤더 의미
+2. <nav> Tag : 네비게이션 의미
+3. <aside> Tag : 사이드에 위치하는 공간 의미
+4. <section> Tag : 주요내용을 의미
+5. <article> Tag : 문자가 많음 의미
+5. <footer> Tag : 문맥상 하위 의미
+
+
+[ 실습 ] 10beforSemanticWeb.html
+
+<!DOCTYPE html>
+
+<html lang="ko">
+	
+	<head>
+		<meta charset="EUC-KR">
+		<title>10beforSemanticWeb.html</title>
+	</head>
+	
+	<body>
+		
+		<div>
+			<h1>WWW ( World Wide Web ) </h1>
+     		<h3>인터넷에 연결된 컴퓨터를 통해 사람들이 정보를 공유할 수 있는 정보 공간</h3>
+	    </div>
+	    
+	    
+	    <div>
+	    	관련 유용한 정보 제공.....
+	        <ul>
+	            <li><a href="http://www.w3.org/">W3C</a></li>
+	            <li><a href="#">etc...</a></li>
+	            <li><a href="#">etc</a></li>
+	        </ul>
+	    </div>
+	    
+	    
+	    <div>
+	        <div>
+	            <h1>인터넷</h1>
+	            <p>- 전 세계를 연결하고 있는 국제 정보 통신망</p>
+	        </div>
+	        
+	        <div>
+	        	<h1>WEB</h1>
+	        	<p>- 인터넷 통신망 위에서 작동하는 서비스</p>
+	            <p>- 1991 년 팀 버니스리는 인터넷 공간 안에서 문서가 서로 이동할 수 있는 
+						하이퍼링크라는<br/>
+					    특수한 기능을 사용<br/> 
+					    문서와 문서 사이를 이동할수 있는 개념을 제안, 이를 바탕으로 
+						World Wide Web 을 개발 배포 </p>
+				<p>- 1994년 팀 버니스리는 HTML 웹 표준을 지정하는 
+							W3C(World Wide Web Consortium)재단<br/>  
+      					창설 HTML(1991) ~ HTML5(2014) 발표 </p>
+      			<p>- W3C는 HTML 표준만 제정 강제하지 않으며, 이로인한 웹브라우저 
+						전쟁(?) 이 시작 됨</p>
+	        </div>
+	        
+	        <div>
+	            <h1>HTML : Hypertext Markup Language</h1>
+	            <p>- 하이퍼텍스트는 사용자의 선택에 따라 특정한 정보화 관련된 부분으로 
+						이동할 수 있는 조직화된 문서</p>
+				<p>- 문자를 동적으로 연결 , 사용자의 선택에 따라 특정한 정보, 관련된 부분으로 
+						이동할 수 있게 조직화 표준화된 문서</p>
+      			<p>- Hyper+Text (활동적, 이동성+문자) : 문자를 동적으로 연결 , 
+						사용자의 선택에 따라 
+						특정한 정보, 관련된 부분으로 이동</p>
+ 	  			<p>- Markup Language :   조직화 된 문서 , 표준화된 문서</p>
+	        </div>
+	    </div>
+	    
+	    <div>
+	        <span>맺음말.......</span>
+	    </div>
+	
+	</body>
+	
+</html>
+
+
+
+[ 실습 ] 11AfterSemanticWeb.html
+
+<!DOCTYPE html>
+
+<html lang="ko">
+	
+	<head>
+		<meta charset="EUC-KR">
+		<title>11AfterSemanticWeb.html</title>
+	</head>
+	
+	<body>
+		
+		<header>
+	        <h1>WWW ( World Wide Web ) </h1>
+     		<h3>인터넷에 연결된 컴퓨터를 통해 사람들이 정보를 공유할 수 있는 정보 공간</h3>
+	    </header>
+	    
+	    
+	    <nav>
+	        관련 유용한 정보 제공.....
+	        <ul>
+	            <li><a href="http://www.w3.org/">W3C</a></li>
+	            <li><a href="#">etc...</a></li>
+	            <li><a href="#">etc</a></li>
+	        </ul>
+	    </nav>
+	    
+	    
+	    <section>
+	        <article>
+	            <h1>인터넷</h1>
+	            <p>- 전 세계를 연결하고 있는 국제 정보 통신망</p>
+	        </article>
+	        
+	        <article>
+	        	<h1>WEB</h1>
+	        	<p>- 인터넷 통신망 위에서 작동하는 서비스</p>
+	            <p>- 1991 년 팀 버니스리는 인터넷 공간 안에서 문서가 서로 이동할 수 있는 
+						하이퍼링크라는<br/>
+					    특수한 기능을 사용<br/> 
+					    문서와 문서 사이를 이동할수 있는 개념을 제안, 이를 바탕으로 
+						World Wide Web 을 개발 배포 </p>
+				<p>- 1994년 팀 버니스리는 HTML 웹 표준을 지정하는 
+							W3C(World Wide Web Consortium)재단<br/>  
+      					창설 HTML(1991) ~ HTML5(2014) 발표 </p>
+      			<p>- W3C는 HTML 표준만 제정 강제하지 않으며, 이로인한 웹브라우저 
+						전쟁(?) 이 시작 됨</p>
+	        </article>
+	        
+	        <article>
+	             <h1>HTML : Hypertext Markup Language</h1>
+	            <p>- 하이퍼텍스트는 사용자의 선택에 따라 특정한 정보화 관련된 부분으로 
+						이동할 수 있는 조직화된 문서</p>
+				<p>- 문자를 동적으로 연결 , 사용자의 선택에 따라 특정한 정보, 관련된 부분으로 
+						이동할 수 있게 조직화 표준화된 문서</p>
+      			<p>- Hyper+Text (활동적, 이동성+문자) : 문자를 동적으로 연결 , 
+						사용자의 선택에 따라 
+						특정한 정보, 관련된 부분으로 이동</p>
+ 	  			<p>- Markup Language :   조직화 된 문서 , 표준화된 문서</p>
+	        </article>
+	    </section>
+	    
+	    <footer>
+	        <span>맺음말.......</span>
+	    </footer>
+	
+	</body>
+	
+</html>
